@@ -1,35 +1,22 @@
 {
-  "name": "tempmail-nuxt",
+  "name": "airo-mail",
   "type": "module",
   "private": true,
-  "engines": {
-    "node": ">=20.0.0"
-  },
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "axios": "^1.14.0",
-    "body-parser": "^2.2.2",
-    "cors": "^2.8.6",
-    "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "multer": "^2.1.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "better-sqlite3": "^12.8.0",
+    "date-fns": "^4.1.0",
+    "lucide-vue-next": "^1.0.0",
+    "nanoid": "^5.1.7",
     "nuxt": "^4.4.2",
     "vue": "^3.5.30",
     "vue-router": "^5.0.4"
-  },
-  "overrides": {
-    "readable-stream": "^3.6.0"
   }
 }
