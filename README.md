@@ -1,35 +1,75 @@
-# TempMail Service (Mailgun Integration)
+# Nuxt Minimal Starter
 
-This is a premium, modern temporary email service built using **Node.js (Express)** on the backend and **Clean HTML/CSS/JS** on the frontend. It uses **Mailgun** to handle incoming emails.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## 🚀 Setup Instructions
+## Setup
 
-### 1. External configuration (DNS)
-Make sure your domain `firtaet.xyz` has its **MX records** pointing to Mailgun:
-- `mxa.mailgun.org` (Priority 10)
-- `mxb.mailgun.org` (Priority 10)
+Make sure to install dependencies:
 
-### 2. Configure Mailgun Route
-To receive emails, you must create a **Route** in your Mailgun dashboard:
-1. Go to **Receiving** -> **Routes**.
-2. Create a New Route.
-3. **Expression Type**: Catch All (or use a Regex like `match_recipient(".*@firtaet.xyz")`).
-4. **Action**: Forward to `http://YOUR_SERVER_IP:3000/webhook` (or your domain/ngrok URL).
-5. **Priority**: 0.
-6. **Description**: TempMail Webhook.
-
-### 3. Run the App
 ```bash
+# npm
 npm install
-npm start
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
-The client will be available at `http://localhost:3000`.
 
-## 📁 Project Structure
-- `server.js`: Express server that listens for Mailgun POST webhooks, verifies signatures, and stores emails.
-- `public/index.html`: Modern frontend with auto-polling (every 5 seconds) to fetch new mail.
-- `.env`: Contains your Mailgun API keys.
-- `db.json`: Local persistent storage for received emails.
+## Development Server
 
-## 🔒 Security
-The project includes **Mailgun Signature Verification** to ensure only legitimate requests from Mailgun are processed.
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
